@@ -1,0 +1,38 @@
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.left_side{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.username {
+    font-size: .9375rem;
+    cursor: pointer;
+}
+
+ .name {
+    color: #737373;
+    font-size: .875rem;
+}
+
+.right_side button{
+    background-color: #0095f6;
+    border: none;
+    font-size: 16px;
+    padding: 7px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+}
