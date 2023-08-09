@@ -1,10 +1,11 @@
 import './App.css';
-import Auth from './pages/auth/auth';
+// import Auth from './pages/auth/auth';
+import Sidenav from './components/nav/nav';
 
 function App() {
   return (
     <div className="App">
-      <Auth/>
+      <Sidenav/>
     </div>
   );
 }
