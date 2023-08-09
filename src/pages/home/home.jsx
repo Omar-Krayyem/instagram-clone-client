@@ -2,6 +2,7 @@ import '../home/home.css';
 import Nav from '../../components/nav/nav';
 import Timeline from '../../components/timeline/timeline';
 import Suggestions from "../../components/suggestion/suggestion";
+import AddPost from '../../components/addPost/addPost';
 
 function Home (){
     return (
@@ -11,6 +12,7 @@ function Home (){
             </div>
             <div className="homepage__timeline">
                 <Timeline />
+                <AddPost/>
             </div>
             <div>
                 <Suggestions/>
