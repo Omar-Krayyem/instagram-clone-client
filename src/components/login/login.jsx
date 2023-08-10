@@ -17,7 +17,8 @@ function Login() {
     axios.post("http://127.0.0.1:8000/api/login", postData)
     .then(response => {
       console.log(response.data);
-      localStorage.setItem("token", response.data.token);
+      let token = response.data.authorisation.token 
+      localStorage.setItem("token", token);
       console.log(localStorage.getItem("token"))
       window.location.href = '/home';
     })

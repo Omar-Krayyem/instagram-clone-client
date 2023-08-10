@@ -1,7 +1,21 @@
 import '../following/following.css';
 import { Avatar } from "@mui/material";
+import axios from "axios";
 
-function Following({username}) {
+function Following({id, username}) {
+
+    const handleUnfollow = async(id) => {
+        console.log(id)
+        const token = localStorage.getItem("token")
+        await axios.delete(`http://127.0.0.1:8000/api/user/following/${id}`, {
+            "headers": {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        window.location.reload();
+    }
+
+
     return (
         <div>
             <div className="suggestions__username">
@@ -16,7 +30,8 @@ function Following({username}) {
                         <span className="relation">New to Instagram</span>
                     </div>
                 </div>
-                <button className="follow__button">Following</button>
+                {/* <button className="follow__button" >Following</button> */}
+                <button className="follow__button" onClick={() => handleUnfollow(id)}>Following</button>
             </div>
         </div>
     );

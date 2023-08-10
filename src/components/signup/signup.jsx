@@ -16,8 +16,12 @@ function Signup() {
     axios.post("http://127.0.0.1:8000/api/register", postData)
     .then(response => {
       console.log(response.data);
-      localStorage.setItem("token", response.data.token);
-      console.log(localStorage.getItem("token"))
+      // console.log(response.data.user);
+      let $token = response.data.authorisation.token 
+      
+      localStorage.setItem("token", $token);
+      console.log($token)
+      // console.log(localStorage.getItem("token"))
       window.location.href = '/home';
     })
     .catch(error => {

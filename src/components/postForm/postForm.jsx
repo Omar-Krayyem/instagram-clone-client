@@ -1,10 +1,12 @@
-import "../addPost/addPost.css"
+import "../postForm/postForm.css"
 import PermMediaOutlinedIcon from '@mui/icons-material/PermMediaOutlined';
 import CloseIcon from '@mui/icons-material/Close';
-function AddPost({setIsAddPostOpened}) {
+import React from 'react';
+
+function PostForm({setIsPostFormOpened}) {
     return (
         <div className="create-post">
-            <div className="close" onClick={() => setIsAddPostOpened(false)}>
+            <div className="close"  onClick={() => setIsPostFormOpened(false)}>
                 <CloseIcon className="close_icon"/>
             </div>
             <div className="box">
@@ -32,4 +34,4 @@ function AddPost({setIsAddPostOpened}) {
     );
 }
 
-export default AddPost
+export default PostForm
