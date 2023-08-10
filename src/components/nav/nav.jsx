@@ -12,7 +12,7 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 
-function Sidenav() {
+function Sidenav({setIsSearchOpened, setIsAddPostOpened}) {
   return (
     <div className="sidenav">
         <div className="upper-section">
@@ -28,7 +28,7 @@ function Sidenav() {
                     <span>Home</span>
                 </button>
 
-                <button className="sidenav__button">
+                <button className="sidenav__button"  onClick={() => setIsSearchOpened(true)}>
                     <SearchIcon />
                     <span>Search</span>
                 </button>
@@ -53,7 +53,7 @@ function Sidenav() {
                     <span>Notifications</span>
                 </button>
 
-                <button className="sidenav__button">
+                <button className="sidenav__button"  onClick={() => setIsAddPostOpened(true)}>
                     <AddCircleOutlineIcon />
                     <span>Create</span>
                 </button>

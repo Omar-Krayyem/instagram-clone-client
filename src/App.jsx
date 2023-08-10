@@ -1,13 +1,17 @@
 import './App.css';
-// import Auth from './pages/auth/auth';
-// import Sidenav from './components/nav/nav';
-import Home from './pages/home/home';
+import React from 'react'
+import { Routes, Route } from "react-router-dom"
+
+
+import Home from "./pages/home/home"
+import Auth from './pages/auth/auth';
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
-    </div>
+    <Routes>
+        <Route path="/" element={<Auth />} />
+        <Route path="/home" element={<Home />} />
+    </Routes>
   );
 }
 

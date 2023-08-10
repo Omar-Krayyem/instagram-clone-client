@@ -1,10 +1,10 @@
 import "../addPost/addPost.css"
 import PermMediaOutlinedIcon from '@mui/icons-material/PermMediaOutlined';
 import CloseIcon from '@mui/icons-material/Close';
-function AddPost() {
+function AddPost({setIsAddPostOpened}) {
     return (
         <div className="create-post">
-            <div className="close">
+            <div className="close" onClick={() => setIsAddPostOpened(false)}>
                 <CloseIcon className="close_icon"/>
             </div>
             <div className="box">
