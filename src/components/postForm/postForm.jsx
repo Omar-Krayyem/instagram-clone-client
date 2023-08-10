@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
 
 function PostForm({setIsPostFormOpened}) {
+
     return (
         <div className="create-post">
             <div className="close"  onClick={() => setIsPostFormOpened(false)}>
@@ -15,7 +16,7 @@ function PostForm({setIsPostFormOpened}) {
                     </div>
                     <div>Create new Post</div>
                     <div className="back-icon icon">
-                        <button>Share</button>
+                        <button >Share</button>
                     </div>
                 </div>
                 <div className="bottom">
